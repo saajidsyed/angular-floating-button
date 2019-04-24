@@ -1,36 +1,41 @@
 import { Component } from '@angular/core';
-import { MfbButton } from './../ng-floating-button';
+import { FloatingActionButton } from 'ng-floating-action-menu';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <ng-floating-action-menu
+      [placement]="config.placment"
+      [effect]="config.effect"
+      [label]="config.label"
+      [iconClass]="config.iconClass"
+      [activeIconClass]="config.activeIconClass"
+      [toggle]="config.toggle"
+      [buttons]="buttons"
+    >
+    </ng-floating-action-menu>
+  `
 })
 export class AppComponent {
-  title = 'app works!';
-  config;
-  buttons: Array<MfbButton> = [
+  title = 'ng2-floating-action-menu';
+
+  public config;
+  public buttons: Array<FloatingActionButton> = [
     {
       iconClass: 'ion-social-github',
       label: 'follow me on github',
-      onClick: function(){
-        location.href = 'https://github.com/tahashahid';
-      }
+      onClick: function() {}
     },
     {
       iconClass: 'ion-social-facebook',
       label: 'follow me on facebook',
-      onClick: function(){
-        location.href = 'https://www.facebook.com/taha.shahid.969';
-      }
+      onClick: function() {}
     },
     {
       iconClass: 'ion-social-linkedin',
       label: 'linkedin',
-      onClick: function(){
-        location.href = 'https://www.linkedin.com/in/taha-shahid-55ab2243';
-      }
-    },
+      onClick: function() {}
+    }
   ];
 
   placements = [
@@ -49,11 +54,11 @@ export class AppComponent {
     {
       value: 'tl',
       key: 'top left'
-    },
+    }
   ];
 
   effects = [
-     {
+    {
       value: 'mfb-zoomin',
       key: 'Zoom In'
     },
@@ -69,16 +74,11 @@ export class AppComponent {
       value: 'mfb-slidein-spring',
       key: 'Slide In (Spring)'
     }
-  ]
+  ];
 
-  toggles = [
-    'click',
-    'hover'
-  ]
+  toggles = ['click', 'hover'];
 
-
-
-  constructor(){
+  constructor() {
     this.config = {
       placment: 'br',
       effect: 'mfb-zoomin',
@@ -87,8 +87,6 @@ export class AppComponent {
       activeIconClass: 'ion-close-round',
       toggle: 'click',
       buttons: this.buttons
-    }
+    };
   }
-
-
 }
