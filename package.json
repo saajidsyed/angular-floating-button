@@ -7,6 +7,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/saajidsyed/angular-floating-button"
-  }
+    "url": "git+https://github.com/saajidsyed/angular-floating-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saajidsyed/angular-floating-button/issues"
+  },
+  "homepage": "https://github.com/saajidsyed/angular-floating-button#readme",
+  "description": "angular floating button",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angualr-floating-button"
+  ],
+  "author": "saajid",
+  "license": "MIT"
 }
