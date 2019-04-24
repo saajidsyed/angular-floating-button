@@ -37,12 +37,13 @@ export class AppModule {}
 
 ```xml
    <angular-floating-button
-     [placement]="config.placment"
+     [placement]="config.placement"
      [effect]="config.effect"
      [label]="config.label"
-     [iconClass]="config.iconClass"
-     [activeIconClass]="config.activeIconClass"
+     [iconClassTemplate]="config.iconClass"
+     [activeIconClassTemplate]="config.activeIconClass"
      [toggle]="config.toggle"
+     [mainButtonClass]="config.mainButtonClass"
      [buttons]="buttons">
    </angular-floating-button>
 ```
@@ -60,18 +61,21 @@ export class AppComponent {
   config;
   buttons: Array<FloatingActionButton> = [
     {
-      iconClass: 'ion-social-github',
+      iconClassTemplate: '<fa-icon icon="check" ></fa-icon>',
       label: 'follow me on github',
+      customClass:'',
       onClick: function() {}
     },
     {
-      iconClass: 'ion-social-facebook',
+      iconClassTemplate: '<fa-icon icon="spinner" ></fa-icon>',
       label: 'follow me on facebook',
+       customClass:'',
       onClick: function() {}
     },
     {
-      iconClass: 'ion-social-linkedin',
+      iconClassTemplate: '<fa-icon icon="check" ></fa-icon>',
       label: 'linkedin',
+       customClass:'',
       onClick: function() {}
     }
   ];
@@ -118,12 +122,13 @@ export class AppComponent {
 
   constructor() {
     this.config = {
-      placment: 'br',
+      placement: 'br',
       effect: 'mfb-zoomin',
       label: 'main button label',
-      iconClass: 'ion-plus-round',
-      activeIconClass: 'ion-close-round',
+      iconClassTemplate: '<mat-icon>add</mat-icon>',
+      activeIconClassTemplate: '<mat-icon>clear</mat-icon>',
       toggle: 'click',
+      mainButtonClass: 'mat-bg-primary'
       buttons: this.buttons
     };
   }

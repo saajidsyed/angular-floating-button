@@ -7,7 +7,6 @@ import { FloatingActionButton } from './FloatingActionButton';
 })
 export class NgFloatingActionButtonComponent implements OnInit {
   @Input() button: FloatingActionButton;
-  @Input() iconType: number;
 
   constructor() {}
 

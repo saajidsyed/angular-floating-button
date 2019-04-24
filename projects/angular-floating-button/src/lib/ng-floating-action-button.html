@@ -1,6 +1,5 @@
-<a href [attr.data-mfb-label]="button.label" (click)="buttonClick()" class="mfb-component__button--child">
+<a href [attr.data-mfb-label]="button.label" (click)="buttonClick()" class="mfb-component__button--child {{button.customClass}}">
     <span class="mfb-component__child-icon">
-        <i class="{{ button.iconClass }}"></i>
+        {{button.iconClassTemplate}}
     </span>
-
 </a>

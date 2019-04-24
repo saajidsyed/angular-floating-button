@@ -13,10 +13,10 @@ export class NgFloatingActionMenuComponent implements OnInit {
   @Input() placement: string;
   @Input() effect: string;
   @Input() label: string;
-  @Input() iconClass: string;
-  @Input() activeIconClass: string;
+  @Input() iconClassTemplate: string;
+  @Input() activeIconClassTemplate: string;
+  @Input() mainButtonClass: string;
   @Input() toggle = 'click';
-  @Input() iconTemplate: string;
   @Input() buttons: Array<FloatingActionButton>;
 
   constructor() {}

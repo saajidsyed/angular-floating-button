@@ -1,5 +1,6 @@
 export class FloatingActionButton {
-  iconClass: string;
+  iconClassTemplate: string;
+  customClass: string;
   label?: string;
   onClick: () => void;
 }
