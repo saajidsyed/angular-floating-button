@@ -4,12 +4,10 @@
         <a class="mfb-component__button--main {{mainButtonClass}}" [attr.data-mfb-label]="label" (click)="clicked()"
             (mouseenter)="entered()" (mouseleave)="leaved()" >
             <!-- the main button icon visibile by default -->
-            <span class="mfb-component__main-icon--resting ">
-                {{ iconClassTemplate }}
+            <span class="mfb-component__main-icon--resting " [innerHTML]="iconClassTemplate">
             </span>
             <!-- the main button icon visibile when the user is hovering/interacting with the menu -->
-            <span class="mfb-component__main-icon--active ">
-                {{ activeIconClassTemplate }}
+            <span class="mfb-component__main-icon--active "  [innerHTML]="activeIconClassTemplate">
             </span>
         </a>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef, ContentChild } from '@angular/core';
 import { FloatingActionButton } from '../public_api';
 
 @Component({
@@ -13,8 +13,8 @@ export class NgFloatingActionMenuComponent implements OnInit {
   @Input() placement: string;
   @Input() effect: string;
   @Input() label: string;
-  @Input() iconClassTemplate: string;
-  @Input() activeIconClassTemplate: string;
+  @ContentChild(TemplateRef) iconClassTemplate: TemplateRef<any>;
+  @ContentChild(TemplateRef) activeIconClassTemplate: TemplateRef<any>;
   @Input() mainButtonClass: string;
   @Input() toggle = 'click';
   @Input() buttons: Array<FloatingActionButton>;
