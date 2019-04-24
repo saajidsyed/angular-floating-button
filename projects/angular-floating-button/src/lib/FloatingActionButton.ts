@@ -1,7 +1,5 @@
-import { TemplateRef } from '@angular/core';
-
 export class FloatingActionButton {
-  iconClassTemplate: TemplateRef<any>;;
+  iconClassTemplate: string;
   customClass: string;
   label?: string;
   onClick: () => void;
