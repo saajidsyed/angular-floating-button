@@ -3,19 +3,11 @@ import { FloatingActionButton } from './FloatingActionButton';
 
 @Component({
   selector: 'ng-floating-action-button',
-  template: `
-    <a
-      href
-      [attr.data-mfb-label]="button.label"
-      (click)="buttonClick()"
-      class="mfb-component__button--child"
-    >
-      <i class="mfb-component__child-icon {{ button.iconClass }}"></i>
-    </a>
-  `
+  templateUrl: './ng-floating-action-button.html'
 })
 export class NgFloatingActionButtonComponent implements OnInit {
   @Input() button: FloatingActionButton;
+  @Input() iconType: number;
 
   constructor() {}
 
