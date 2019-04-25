@@ -14,8 +14,8 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "angular-floating-button": ["dist/angular-floating-button"],
-      "angular-floating-button/*": ["dist/angular-floating-button/*"]
+      "ng-floating-action-menu": ["dist/ng-floating-action-menu"],
+      "ng-floating-action-menu/*": ["dist/ng-floating-action-menu/*"]
     }
   }
 }

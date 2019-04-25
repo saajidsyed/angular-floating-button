@@ -1,43 +1,39 @@
 import { Component } from '@angular/core';
-import { FloatingActionButton } from 'angular-floating-button';
+import { FloatingActionButton } from 'ng-floating-action-menu';
 
 @Component({
   selector: 'app-root',
   template: `
-    <angular-floating-button
+    <ng-floating-action-menu
       [placement]="config.placment"
       [effect]="config.effect"
       [label]="config.label"
-      [iconClassTemplate]="config.iconClass"
-      [activeIconClassTemplate]="config.activeIconClass"
+      [iconClass]="config.iconClass"
+      [activeIconClass]="config.activeIconClass"
       [toggle]="config.toggle"
-      [mainButtonClass]="config.mainButtonClass"
       [buttons]="buttons"
     >
-    </angular-floating-button>
+    </ng-floating-action-menu>
   `
 })
 export class AppComponent {
-  title = 'angular-floating-button';
+  title = 'ng2-floating-action-menu';
 
   public config;
   public buttons: Array<FloatingActionButton> = [
     {
-      iconClassTemplate: '<fa-icon icon="check" ></fa-icon>',
+      iconClass: 'ion-social-github',
       label: 'follow me on github',
-      customClass:'',
       onClick: function() {}
     },
     {
-      iconClassTemplate: '<fa-icon icon="spinner" ></fa-icon>',
+      iconClass: 'ion-social-facebook',
       label: 'follow me on facebook',
-       customClass:'',
       onClick: function() {}
     },
     {
-      iconClassTemplate: '<fa-icon icon="check" ></fa-icon>',
+      iconClass: 'ion-social-linkedin',
       label: 'linkedin',
-       customClass:'',
       onClick: function() {}
     }
   ];
@@ -84,13 +80,12 @@ export class AppComponent {
 
   constructor() {
     this.config = {
-      placement: 'br',
+      placment: 'br',
       effect: 'mfb-zoomin',
       label: 'main button label',
-      iconClassTemplate: '<mat-icon>add</mat-icon>',
-      activeIconClassTemplate: '<mat-icon>clear</mat-icon>',
+      iconClass: 'ion-plus-round',
+      activeIconClass: 'ion-close-round',
       toggle: 'click',
-      mainButtonClass: 'mat-bg-primary',
       buttons: this.buttons
     };
   }
