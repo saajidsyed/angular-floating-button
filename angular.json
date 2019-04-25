@@ -117,7 +117,7 @@
         }
       }
     },
-    "angular-floating-button": {
+    "angular2-floating-button": {
       "root": "projects/angular-floating-button",
       "sourceRoot": "projects/angular-floating-button/src",
       "projectType": "library",

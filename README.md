@@ -128,7 +128,7 @@ export class AppComponent {
       iconClassTemplate: '<mat-icon>add</mat-icon>',
       activeIconClassTemplate: '<mat-icon>clear</mat-icon>',
       toggle: 'click',
-      mainButtonClass: 'mat-bg-primary'
+      mainButtonClass: 'mat-bg-primary',
       buttons: this.buttons
     };
   }
